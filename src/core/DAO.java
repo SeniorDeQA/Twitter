@@ -1,4 +1,4 @@
-package selenium;
+package core;
 
 import java.sql.*;
 
@@ -38,7 +38,7 @@ public class DAO {
 		return conn;
 	}
 
-	static void closeConnection() {
+	public static void closeConnection() {
 		conn = null;
 		System.out.println("Cerrada conexión");
 	}
@@ -68,7 +68,7 @@ public class DAO {
 
 	}
 	
-	static void insertaTrazaTest(String queTest, String QueNavegador, String debug, int resulTest){
+	public static void insertaTrazaTest(String queTest, String QueNavegador, String debug, int resulTest){
 		try {
 			
 			

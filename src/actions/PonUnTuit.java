@@ -1,14 +1,17 @@
-package selenium;
+package actions;
 
 import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 
+import core.CuatroEnUno;
+import core.DAO;
+
 
 
 public class PonUnTuit {
 	
-	protected static void tuitear(String QueNavegador) throws SQLException, Exception {
+	public static void tuitear(String QueNavegador) throws SQLException, Exception {
 		
 		String debug = "Incertidumbre cuántica";
 		String queTest = "Pon un tuit";

@@ -1,4 +1,4 @@
-package selenium;
+package core;
 
 import java.sql.SQLException;
 
@@ -8,13 +8,12 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import selenium.PonUnTuit;
 
 
 public class CuatroEnUno {
 	
 	static final String RUTA_SELENIUM = "C://Users//dortiz//workspace//selenium_3.4.0";
-	static WebDriver driver; 
+	public static WebDriver driver; 
 	static DesiredCapabilities caps;
 	
 	
@@ -22,7 +21,7 @@ public class CuatroEnUno {
 		//Baterías de pruebas, abstraida de navegador
 		
 		try {
-			PonUnTuit.tuitear(QueNavegador);
+			actions.PonUnTuit.tuitear(QueNavegador);
 		} catch (SQLException e) {
 			System.out.println("-- Excepción al presistir resultado del test --");
 		} catch (Exception e) {
