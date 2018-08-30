@@ -1,7 +1,6 @@
 package actions;
 
 import java.sql.SQLException;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 
 import core.CuatroEnUno;
@@ -40,8 +39,7 @@ public class Logout {
 							resulTest = 0;
 						}
 			DAO.insertaTrazaTest(queTest,QueNavegador,debug,resulTest);
-			DAO.resultadosPorNavegador(QueNavegador);
-			
+			//DAO.resultadosPorNavegador(QueNavegador);
 			DAO.closeConnection();
 		}
 			

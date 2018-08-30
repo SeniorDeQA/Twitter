@@ -40,7 +40,7 @@ public class DAO {
 
 	public static void closeConnection() {
 		conn = null;
-		System.out.println("Cerrada conexión");
+		//System.out.println("Cerrada conexión");
 	}
 	
 	

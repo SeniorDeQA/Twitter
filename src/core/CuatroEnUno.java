@@ -23,8 +23,8 @@ public class CuatroEnUno {
 		try {
 			actions.Login.loguear(QueNavegador);
 			actions.PonUnTuit.tuitear(QueNavegador);
-			actions.BorraUltimo.borrar(QueNavegador);
-			actions.Logout.desloguear(QueNavegador);
+			//actions.BorraUltimo.borrar(QueNavegador);
+			//actions.Logout.desloguear(QueNavegador);
 			
 			
 		} catch (SQLException e) {

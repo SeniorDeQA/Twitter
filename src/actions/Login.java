@@ -1,7 +1,6 @@
 package actions;
 
 import java.sql.SQLException;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 
 import core.CuatroEnUno;
