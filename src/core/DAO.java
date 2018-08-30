@@ -8,9 +8,9 @@ public class DAO {
 	
 	//Definimos una conn, escuchando 3 tipos de excepciones
 	public static void defineConnection(String cadenaConexion, String usuario, String clave) throws SQLException {
-		String url = cadenaConexion; //"jdbc:mysql://localhost:3306/";
-		String user = usuario;
-		String password = clave;
+		String url = "jdbc:mysql://localhost:3306/";
+		String user = "root";
+		String password = "";
 		
 		
 		try {
@@ -45,7 +45,8 @@ public class DAO {
 	
 	
 	//Le pasamos un string sql a la clase, y la ejecuta
-	static void resultadosPorNavegador(String QueNavegador){
+	//llamamos aquí en el logout para ver resultados
+	public static void resultadosPorNavegador(String QueNavegador){
 		
 		
 		try {
@@ -72,7 +73,7 @@ public class DAO {
 		try {
 			
 			
-			PreparedStatement pst = DAO.getConnection().prepareStatement("INSERT INTO pruebas.resultados_selenium (Proyecto,Tipo,Navegador,Resultado,Traza) VALUES ('Tuiter',?,?,?,?);");
+			PreparedStatement pst = DAO.getConnection().prepareStatement("INSERT INTO pruebas.resultados_selenium (Tipo,Navegador,Resultado,Traza) VALUES (?,?,?,?);");
 			pst.setString(1, queTest);
 			pst.setString(2, QueNavegador);
 			pst.setInt(3, resulTest);

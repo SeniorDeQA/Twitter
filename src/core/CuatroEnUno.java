@@ -21,15 +21,18 @@ public class CuatroEnUno {
 		//Baterías de pruebas, abstraida de navegador
 		
 		try {
+			actions.Login.loguear(QueNavegador);
 			actions.PonUnTuit.tuitear(QueNavegador);
+			actions.BorraUltimo.borrar(QueNavegador);
+			actions.Logout.desloguear(QueNavegador);
+			
+			
 		} catch (SQLException e) {
 			System.out.println("-- Excepción al presistir resultado del test --");
 		} catch (Exception e) {
 			System.out.println("-- Excepción. Fijo que ha sido por no poder localizar un elemento --");
 		}
-		
-		
-		
+
 		
 		//driver.quit();
 		System.out.println("FIN PRUEBAS en "+QueNavegador);

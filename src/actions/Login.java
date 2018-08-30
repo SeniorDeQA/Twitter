@@ -9,12 +9,12 @@ import core.DAO;
 
 
 
-public class PonUnTuit {
+public class Login {
 	
-	public static void tuitear(String QueNavegador) throws SQLException, Exception {
+	public static void loguear(String QueNavegador) throws SQLException, Exception {
 		
 		String debug = "Incertidumbre cuántica";
-		String queTest = "Pon un tuit";
+		String queTest = "Loguearse";
 		int resulTest=2;
 		
 		try{ 
@@ -26,14 +26,9 @@ public class PonUnTuit {
 			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/fieldset/div[1]/input")).sendKeys("unbotcualquier1");
 			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/fieldset/div[2]/input")).sendKeys("blabla");
 			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/div[2]/button")).click();
+		
 			
-			//Tuiteamos
-			CuatroEnUno.driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); //¿Espera alta hace petar?
-			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"global-new-tweet-button\"]/span")).click();
-			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"Tweetstorm-tweet-box-0\"]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]")).sendKeys("Esto es una prueba");
-			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"Tweetstorm-tweet-box-0\"]/div[2]/div[2]/div[2]/span/button[2]/span")).click();
-
-
+			
 			debug = "Test OK";
 			
 			
@@ -55,6 +50,6 @@ public class PonUnTuit {
 			
 		
 			
-	}//Fin ponerTuit
+	}//Fin loguear
 
-}//Fin PonUnTuit
+}//Fin Login
