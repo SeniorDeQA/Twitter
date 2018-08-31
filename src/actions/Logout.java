@@ -20,12 +20,10 @@ public class Logout {
 			
 			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"user-dropdown-toggle\"]")).click();
 			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"signout-button\"]/button")).click();
-		
-			
 			
 			debug = "Test OK";
 			
-			
+			CuatroEnUno.driver.quit();
 			
 		} catch (Exception e){
 			debug = e.getMessage();

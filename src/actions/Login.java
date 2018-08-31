@@ -1,6 +1,8 @@
 package actions;
 
 import java.sql.SQLException;
+
+
 import org.openqa.selenium.By;
 
 import core.CuatroEnUno;
@@ -24,6 +26,7 @@ public class Login {
 			//problemas aleatorios en acceso
 			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/fieldset/div[1]/input")).sendKeys("unbotcualquier1");
 			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/fieldset/div[2]/input")).sendKeys("blabla");
+					
 			CuatroEnUno.driver.findElement(By.xpath("//*[@id=\"page-container\"]/div/div[1]/form/div[2]/button")).click();
 		
 			

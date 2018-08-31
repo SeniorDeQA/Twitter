@@ -24,7 +24,7 @@ public class CuatroEnUno {
 			actions.Login.loguear(QueNavegador);
 			actions.PonUnTuit.tuitear(QueNavegador);
 			//actions.BorraUltimo.borrar(QueNavegador);
-			//actions.Logout.desloguear(QueNavegador);
+			actions.Logout.desloguear(QueNavegador);
 			
 			
 		} catch (SQLException e) {
@@ -34,7 +34,6 @@ public class CuatroEnUno {
 		}
 
 		
-		//driver.quit();
 		System.out.println("FIN PRUEBAS en "+QueNavegador);
 	}
 	
