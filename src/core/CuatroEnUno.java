@@ -23,7 +23,7 @@ public class CuatroEnUno {
 		try {
 			actions.Login.loguear(QueNavegador);
 			actions.PonUnTuit.tuitear(QueNavegador);
-			//actions.BorraUltimo.borrar(QueNavegador);
+			actions.BorraUltimo.borrar(QueNavegador, 3); //Parámetro CuantosBorrados
 			actions.Logout.desloguear(QueNavegador);
 			
 			
