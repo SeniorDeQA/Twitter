@@ -29,17 +29,10 @@ public class Logout {
 			debug = e.getMessage();
 			System.out.print(debug);
 		} finally {
-			//TODO igual un setter en el DAO permitiria limpiar esto apra no copypastearlo siempre
-			DAO.defineConnection("jdbc:mysql://localhost:3306/","root","");
-			if (debug == "Test OK") {
-				resulTest = 1;
-						} else {
-							resulTest = 0;
-						}
+			
 			DAO.insertaTrazaTest(queTest,QueNavegador,debug,resulTest);
-			//DAO.resultadosPorNavegador(QueNavegador);
-			DAO.closeConnection();
-		}
+		
+		}	
 			
 		
 			

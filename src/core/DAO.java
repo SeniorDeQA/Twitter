@@ -72,6 +72,12 @@ public class DAO {
 	public static void insertaTrazaTest(String queTest, String QueNavegador, String debug, int resulTest){
 		try {
 			
+			DAO.defineConnection("jdbc:mysql://localhost:3306/","root","");
+			if (debug == "Test OK") {
+				resulTest = 1;
+						} else {
+							resulTest = 0;
+						}
 			
 			PreparedStatement pst = DAO.getConnection().prepareStatement("INSERT INTO pruebas.resultados_selenium (Tipo,Navegador,Resultado,Traza) VALUES (?,?,?,?);");
 			pst.setString(1, queTest);
@@ -80,6 +86,7 @@ public class DAO {
 			pst.setString(4, debug);
 			pst.executeUpdate();
 
+			DAO.closeConnection();
 			
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());

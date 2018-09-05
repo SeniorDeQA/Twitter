@@ -44,15 +44,9 @@ public class BorraUltimo {
 			debug = e.getMessage();
 			System.out.print(debug);
 		} finally {
-			DAO.defineConnection("jdbc:mysql://localhost:3306/","root","");
-			if (debug == "Test OK") {
-				resulTest = 1;
-						} else {
-							resulTest = 0;
-						}
+			
 			DAO.insertaTrazaTest(queTest,QueNavegador,debug,resulTest);
 			
-			DAO.closeConnection();
 		}
 			
 		
