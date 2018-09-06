@@ -8,10 +8,9 @@ public class DAO {
 	
 	//Definimos una conn, escuchando 3 tipos de excepciones
 	public static void defineConnection(String cadenaConexion, String usuario, String clave) throws SQLException {
-		String url = "jdbc:mysql://localhost:3306/";
-		String user = "root";
-		String password = "";
-		
+		String url = Configuracion.getConfig("BD.cadena"); 
+		String user = Configuracion.getConfig("BD.user"); 
+		String password = Configuracion.getConfig("BD.clave"); 
 		
 		try {
 			   Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();

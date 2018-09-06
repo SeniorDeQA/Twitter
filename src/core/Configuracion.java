@@ -6,15 +6,12 @@ import java.util.*;
 
 public class Configuracion {
 	
-	
-	static final String RUTA_PROPERTIES="C://Users//dortiz//workspace//Twitter//Twitter//config.properties";
-	
+	static final String RUTA_PROPERTIES="C://Users//dortiz//git//Twitter//config.properties";
 
 	//Prueba de que engancha
 	//public static void main(String[] args) {
 	//	getConfig("BD.user");
 	//}
-	
 	
     static public String getConfig(String clave) {
     	
@@ -36,7 +33,6 @@ public class Configuracion {
 			System.out.println("La ruta del properties está mal");
 		}
 		
-		System.out.println(valor);
 		return valor;
 
     }			

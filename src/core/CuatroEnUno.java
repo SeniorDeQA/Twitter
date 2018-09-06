@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class CuatroEnUno {
 	
-	static final String RUTA_SELENIUM = "C://Users//dortiz//workspace//selenium_3.4.0";
+	static final String RUTA_SELENIUM = Configuracion.getConfig("Workspace.ruta") + "//selenium_3.4.0";
 	public static WebDriver driver; 
 	static DesiredCapabilities caps;
 	
